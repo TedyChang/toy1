@@ -9,6 +9,7 @@ import org.mockito.Mockito;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 class UserServiceTest {
@@ -28,6 +29,14 @@ class UserServiceTest {
         String userName = userService.UserName();
         assertEquals("admin2",userName);
     }
+    @Test
+    void isAdmin() {
+        when(userRepository.IsAdmin(any())).thenReturn("admin2");
+        String userName = userService.IsAdmin("tedd2");
+        assertEquals("admin",userName);
+    }
+
+
 
 
 }
