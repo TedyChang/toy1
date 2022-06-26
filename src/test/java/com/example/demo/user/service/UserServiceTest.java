@@ -31,8 +31,8 @@ class UserServiceTest {
     }
     @Test
     void isAdmin() {
-        when(userRepository.IsAdmin(any())).thenReturn("admin2");
-        String userName = userService.IsAdmin("tedd2");
+        when(userRepository.IsAdmin(any())).thenReturn("------");
+        String userName = userService.IsAdmin("admin");
         assertEquals("admin",userName);
     }
 
