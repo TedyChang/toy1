@@ -20,6 +20,7 @@ public class UserService {
             return "admin";
         }
 
+
         return userRepository.IsAdmin(name);
     }
 }
